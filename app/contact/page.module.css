@@ -1,0 +1,57 @@
+/* -------- GENERAL LAYOUT -------- */
+
+.screen {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6rem 1rem 8rem;
+    /* vertical black‑to‑charcoal gradient bg */
+    background: radial-gradient(circle at 50% -20%, #000 0%, #000 30%, #222 100%);
+    color: #fff;
+  }
+  
+  /* -------- GL OWING HERO TEXT -------- */
+  
+  .hero {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 700;
+    margin: 0 0 5rem;
+    text-align: center;
+  
+    /* warm glow */
+    color: #fddfbd; /* light centre */
+    text-shadow:
+      0 0 1px #fbb040,
+      0 0 1px #fbb040,
+      0 0 20px #fbb040;
+  }
+  
+  /* -------- FORM WRAPPER -------- */
+  
+  .container {
+    width: 100%;
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .heading {
+    font-size: clamp(1.8rem, 4vw, 3.2rem);
+    font-weight: 300;
+    margin: 0 0 2.5rem;
+    letter-spacing: 0.04em;
+    text-align: center;
+  }
+  
+  /* The form itself lives in its own component, but we can style it
+     from here by targeting its root class (see ContactForm.module.css). */
+  
+  /* Make sure any stray elements shrink elegantly on phones */
+  @media (max-width: 480px) {
+    .hero {
+      margin-bottom: 3rem;
+    }
+  }
+  
