@@ -1,0 +1,57 @@
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1f2024;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px; /* Narrower card similar to FAQ box */
+    margin: 1rem auto; /* Center horizontally */
+  }
+  
+  .textContainer {
+    flex: 1;
+  }
+  
+  .header {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #f5f3f0;
+  }
+  
+  .subheader {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    color: #f5f3f0;
+  }
+  
+  .buttonContainer {
+    margin-left: 1rem;
+  }
+  
+
+  .button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #ffab00;
+    color: #14151b;
+    text-decoration: none;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: transform 0.2s;
+  }
+  
+  .button:hover {
+    background-color: #e09900;
+  }
+  
+.faqSection {
+    background: #14151b;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    color: #f5f3f0;
+  }

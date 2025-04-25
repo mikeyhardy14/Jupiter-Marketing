@@ -20,7 +20,7 @@ export default function Hero() {
         <h1 className={styles.title}>Jupiter Marketing</h1>
         <p className={styles.subtitle}>Taking your ideas to new heights</p>
         <Link href="/contact" className={styles.cta}>
-          Get in Touch
+          GET IN TOUCH
         </Link>
       </div>
     </section>
