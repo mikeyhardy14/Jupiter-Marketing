@@ -8,28 +8,30 @@
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 800px; /* Narrower card similar to FAQ box */
+    max-width: 1000px; /* Narrower card similar to FAQ box */
     margin: 1rem auto; /* Center horizontally */
   }
   
   .textContainer {
     flex: 1;
+    max-width: 60%;
   }
   
   .header {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
     color: #f5f3f0;
   }
   
   .subheader {
-    font-size: 0.875rem;
+    font-size: 1.1rem;
     margin-bottom: 1rem;
     color: #f5f3f0;
   }
   
   .buttonContainer {
-    margin-left: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 10%;
   }
   
 
@@ -42,6 +44,7 @@
     border-radius: 2rem;
     text-transform: uppercase;
     font-weight: bold;
+    font-size: 1.5rem;
     transition: transform 0.2s;
   }
   

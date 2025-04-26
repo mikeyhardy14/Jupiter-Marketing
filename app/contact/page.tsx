@@ -1,24 +1,22 @@
-/**
- * Contact – Jupiter Marketing
- * Full‑screen gradient, glowing headline, centred contact form.
- */
-import ContactForm from "@/components/ContactForm/ContactForm";
-import styles from "./page.module.css";
+// app/components/Contact/Contact.tsx
+import heroStyles from '../../components/Hero/Hero.module.css';  // for .title & .subtitle :contentReference[oaicite:0]{index=0}&#8203;:contentReference[oaicite:1]{index=1}
+import styles from './page.module.css';
 
-export const metadata = {
-  title: "Contact · Jupiter Marketing",
-  description: "Start a project with Jupiter Marketing.",
-};
-
-export default function ContactPage() {
+export default function Contact() {
   return (
-    <main className={styles.screen}>
-      <h1 className={styles.hero}>Let’s Start A Project</h1>
-
-      <section className={styles.container}>
-        <h2 className={styles.heading}>Contact Us</h2>
-        <ContactForm />
-      </section>
-    </main>
+    <section className={styles.contact}>
+      <h1 className={heroStyles.title}>Contact Us</h1>
+      <p className={heroStyles.subtitle}>
+        Feel free to reach out (We accept texts too!):
+      </p>
+      <div className={styles.info}>
+        <a href="tel:+11234567890" className={styles.link}>
+          +1 (540) 431-0934
+        </a>
+        <a href="mailto:info@jupitermarketing.com" className={styles.link}>
+          info@jupitermarketing.com
+        </a>
+      </div>
+    </section>
   );
 }
