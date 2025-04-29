@@ -27,9 +27,9 @@ export default function Process() {
         <h2 className={styles.heading}>About Us</h2>
         <p className={styles.text}>
           At Jupiter Marketing Agency, we pride ourselves on being an experienced, reliable, and honest digital marketing company that has produced tangible results for businesses across the United States. Our expertise extends to designing and executing custom digital marketing plans for top lawyers, doctors, dentists, and other service-based businesses, helping them enhance their online presence and achieve their marketing goals.
-            <br></br><br></br>
+          <br /><br />
           As a result-driven agency, we don’t just talk—we deliver. Our commitment to excellence and our dedication to our clients’ success have earned us a reputation as a trusted partner for businesses looking to elevate their digital marketing strategies. With a focus on innovative and personalized solutions, we work closely with each of our clients to create and implement marketing plans that align with their unique needs and objectives.
-          <br></br><br></br>
+          <br /><br />
           At Jupiter Marketing Agency, we are passionate about helping our clients grow and thrive in the digital world. If you are seeking a digital agency that delivers results and is invested in your success, contact us today to get a free proposal and embark on a transformative journey with us.
         </p>
         <Link href="/contact" className={styles.button}>

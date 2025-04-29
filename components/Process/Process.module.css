@@ -1,96 +1,150 @@
+/* Process.module.css */
+
+/* === Mobile-first base styles === */
 .container {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1.5rem;
+  background: radial-gradient(circle at 30% 30%, #ffab00, #14151b 80%);
+  color: #f5f3f0;
+}
+
+.planets {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+}
+
+/* floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-20px); }
+}
+
+.card {
+  background: radial-gradient(circle at 50% 50%, #ffab00, #cf8a00);
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  animation: float 4s ease-in-out infinite;
+}
+
+.card:nth-child(1) { animation-delay: 0s; }
+.card:nth-child(2) { animation-delay: 1s; }
+.card:nth-child(3) { animation-delay: 2s; }
+.card:nth-child(4) { animation-delay: 3s; }
+
+.offset {
+  margin-top: 1.5rem;
+}
+
+.iconWrapper {
+  width: 4rem;
+  height: 4rem;
+  background: #14151b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.cardTitle {
+  font-size: clamp(0.8rem, 2vw, 1.25rem);
+  color: #f5f3f0;
+  text-align: center;
+  max-width: 80%;
+  overflow-wrap: break-word;
+}
+
+/* center everything (including the button) on mobile */
+.about {
+  width: 100%;
+  text-align: center;
+}
+
+.heading {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* inline-block button, centered by its parent’s text-align */
+.button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  background: #ffab00;
+  color: #14151b;
+  text-decoration: none;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: transform 0.2s;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+/* === Larger screens (tablets & up) === */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
     padding: 5rem 10rem;
     gap: 2rem;
-    background: radial-gradient(circle at 30% 30%, #ffab00, #14151b 80%);
-    color: #f5f3f0;
   }
-  
+
   .planets {
     width: 50%;
-    display: grid;
     grid-template-columns: repeat(2, minmax(250px, 1fr));
     gap: 1.5rem;
-    align-items: start;
   }
-  
-  /* floating animation */
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-  }
-  
+
   .card {
-    background: radial-gradient(circle at 50% 50%, #ffab00, #cf8a00);
-    border-radius: 50%;
     width: 250px;
     height: 250px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-    animation: float 4s ease-in-out infinite;
   }
-  
-  /* stagger floating timings */
-  .card:nth-child(1) { animation-delay: 0s; }
-  .card:nth-child(2) { animation-delay: 1s; }
-  .card:nth-child(3) { animation-delay: 2s; }
-  .card:nth-child(4) { animation-delay: 3s; }
-  
+
   .offset {
     margin-top: 2.5rem;
   }
-  
-  .iconWrapper {
-    width: 4rem;
-    height: 4rem;
-    background: #14151b;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 0.75rem;
-  }
-  
-  .cardTitle {
-    font-size: 1.25rem;
-    color: #f5f3f0;
-  }
-  
+
   .about {
     width: 40%;
     padding: 1rem;
+    text-align: left; /* restore left-alignment on desktop */
   }
-  
+
   .heading {
     font-size: 2rem;
-    margin-bottom: 0.5rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
   }
-  
+
   .text {
+    font-size: 1rem;
     line-height: 1.6;
-    margin-bottom: 1rem;
   }
-  
+
   .button {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background: #ffab00;
-    color: #14151b;
-    text-decoration: none;
-    border-radius: 2rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    transition: transform 0.2s;
+    margin: 0;                 /* remove mobile margin-top */
+    padding: 0.75rem 1.5rem;   /* original desktop padding */
+    font-size: 1rem;           /* original desktop size */
   }
-  
-  .button:hover {
-    transform: scale(1.05);
-  }
-  
+}
