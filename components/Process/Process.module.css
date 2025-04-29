@@ -4,16 +4,17 @@
 .container {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 2rem 0;                     /* top/bottom only */
   gap: 1.5rem;
   background: radial-gradient(circle at 30% 30%, #ffab00, #14151b 80%);
   color: #f5f3f0;
+  width: 100%;                         /* ensure full-width */
 }
 
 .planets {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(2, minmax(180px, 1fr));  /* exactly 2 columns */
   gap: 1rem;
   justify-items: center;
 }
@@ -66,7 +67,7 @@
   overflow-wrap: break-word;
 }
 
-/* center everything (including the button) on mobile */
+/* center content (including the button) on mobile */
 .about {
   width: 100%;
   text-align: center;
@@ -85,7 +86,7 @@
   margin-bottom: 1rem;
 }
 
-/* inline-block button, centered by its parent’s text-align */
+/* inline-block button, centered by parent text-align */
 .button {
   display: inline-block;
   margin-top: 1.5rem;
@@ -108,7 +109,7 @@
 @media (min-width: 768px) {
   .container {
     flex-direction: row;
-    padding: 5rem 10rem;
+    padding: 5rem 10rem;            /* restore horizontal padding */
     gap: 2rem;
   }
 
@@ -130,7 +131,7 @@
   .about {
     width: 40%;
     padding: 1rem;
-    text-align: left; /* restore left-alignment on desktop */
+    text-align: left;               /* left align on desktop */
   }
 
   .heading {
@@ -143,8 +144,8 @@
   }
 
   .button {
-    margin: 0;                 /* remove mobile margin-top */
-    padding: 0.75rem 1.5rem;   /* original desktop padding */
-    font-size: 1rem;           /* original desktop size */
+    margin: 0;                      /* remove mobile top margin */
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
   }
 }
